@@ -1,0 +1,23 @@
+# FROM python:3.7-stretch AS build
+FROM python:3.10-alpine AS build
+LABEL Maintainer="antocm"
+RUN apk add --no-cache bash shadow
+
+RUN groupadd -g 999 python && \
+    useradd -r -u 999 -g python python
+
+RUN mkdir /usr/app && chown python:python /usr/app
+WORKDIR /usr/app
+
+# COPY --chown=python:python --from=build /usr/app/venv ./venv
+# COPY --chown=python:python . .
+
+USER 999
+
+ENV PATH="/usr/app/venv/bin:$PATH"
+# WORKDIR /usr/local/lib/python3.10/site-packages/oru2xds
+
+RUN python -m pip install --upgrade pip
+RUN pip install oru2xds
+
+CMD [ "python3", "oru2xds.py" ]
