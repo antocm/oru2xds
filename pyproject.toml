@@ -4,14 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "oru2xds"
-# version="2.0.1"
 dynamic = ["version"]
 authors = [
     { name="Antonio Martins", email="digiplan.pt@gmail.com" },
 ]
 description = "Receive HL7 messages and send them to an XDS.b repository"
 readme = "README.md"
-license = { file = "LICENSE.md" }
+license = { text = "GPL-3.0-or-later" }
+# license = { file = "LICENSE.md" }
+# project_urls = "https://github.com/antocm/oru2xds"
 requires-python = ">=3.7"
 classifiers = [
     "Development Status :: 4 - Beta",
