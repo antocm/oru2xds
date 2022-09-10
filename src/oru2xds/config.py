@@ -8,7 +8,6 @@
 APP_NAME = 'oru2xds'
 
 # AFFINITY_DOMAIN_ASSIGNING_AUTHORITY_OID = "1.1.4567332.1.1"
-# AFFINITY_DOMAIN_ASSIGNING_AUTHORITY_OID = "1.3.6.1.4.1.55196.1.2.2.1.1"
 AFFINITY_DOMAIN_ASSIGNING_AUTHORITY_OID = "1.3.6.1.4.1.21367.13.20.3000"
 
 # XDS Provide and Register Document Set-b transaction endpoint
@@ -35,11 +34,11 @@ LOG_SOAP_ENVELOPE_TOFILE = True
 LOG_SOAP_RESPONSE_TOFILE = True
 
 # HTTP user-agent string used in SOAP transaction
+# TODO: update the user agent version from __version__.py
 HTTP_USER_AGENT = 'oru2xds/1.0.0'
 
 # If you want to add an xml stylesheet to the CDA, add it here
-# cda_stylesheet = None
-# cda_stylesheet = "http://registry.mysexampl.local:80/cda-stylesheet/cda_hospital.xsl"
+# cda_stylesheet = "CDA.xsl"
 cda_stylesheet = None
 
 # XML structures are sent with leading spaces in pretty_print or not
