@@ -1,5 +1,7 @@
 FROM python:3.10-alpine AS build
-LABEL Maintainer="antocm"
+
+LABEL maintainer="digiplan.pt@gmail.com"
+
 RUN apk add --no-cache bash shadow
 
 WORKDIR /usr/local/lib/python3.10/site-packages/oru2xds
