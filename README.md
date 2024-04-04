@@ -27,14 +27,14 @@ $ docker pull antocm/oru2xds
 
 ### Install and execute XDS toolkit for testing purposes (optional)
 
-If you do not have a tested IHE XDS repository, or if you want to try oru2xds first against a reference implementation like xdstoolkit, here is how to do it. We will run xdstoolkit as a docker container (from https://hub.docker.com/r/antocm/xdstools774)
+If you do not have a tested IHE XDS repository, or if you want to try oru2xds first against a reference implementation like xdstoolkit, here is how to do it. We will run xdstoolkit as a docker container (from https://hub.docker.com/r/antocm/xdstools)
 
 ```
-$ docker pull antocm/xdstools774
+$ docker pull antocm/xdstools:7.11.0
 $ docker image ls
 ```
 
-Now you have XDS toolkit installed as a docker image running in http://localhost>:8080/xdstools4/
+Now you have XDS toolkit installed as a docker image running in http://localhost:8080/xdstools7/
 
 XDS Toolkit config password: easy
 
@@ -42,11 +42,11 @@ Tomcat UI username/password: admin/admin
 
 You can now run the XDS toolkit with:
 
-`$ docker run -it -p 8080:8080 -p 8888:8888 -p 8443:8443 -v $PWD/cache:/tmp/xdstoolkit-cache antocm/xdstools774`
+`$ docker run -it -p 8080:8080 -p 8888:8888 -p 8443:8443 -v $PWD/cache:/tmp/xdstoolkit-cache antocm/xdstools:7.11.0`
 
 And stop it with:
 
-`$ docker stop $(docker ps -q --filter ancestor=antocm/xdstools774)`
+`$ docker stop $(docker ps -q --filter ancestor=antocm/xdstools:7.11.0)`
 
 If you want to restart it, you can just
 
@@ -61,7 +61,7 @@ To list running containers use `$ docker ps`
 
 ## Preparations for a test conversion
 
-* a XDS toolkit should be available. Open a browser in http://localhost:8080/xdstools4/
+* a XDS toolkit should be available. Open a browser in http://localhost:8080/xdstools7/
 * Go to "Toolkit configuration" on the left toolbar.
 * Type the admin password "easy".
 * Check the "External cache" to be /tmp/xdstoolkit-cache which should be now mapped to the directory "cache" of your current directory.
@@ -70,7 +70,7 @@ To list running containers use `$ docker ps`
 * Go to "Simulators" on the left toolbar.
 * Select actor type and select "Document Repository/Registry", Simulator ID "1" and press "Create Actor Simulator".
 * Select the row with ID "Default__1" and press the "Edit" button below.
-* Confirm that PnR endpoint is http://localhost:8080/xdstools4/sim/default__1/rep/prb
+* Confirm that PnR endpoint is http://localhost:8080/xdstools7/sim/default__1/rep/prb
 * Close the "SimConfig default__1" tab.
 * Close the "SimCntl" tab.
 * Go to "Manage Patient IDs" on the left toolbar.
