@@ -1,5 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/antocm/Dropbox/Unsorted/IHE/Programming/oru2xds'
-rm -rf oru2xds.egg-info build target
-make: Leaving directory '/home/antocm/Dropbox/Unsorted/IHE/Programming/oru2xds'
- 
