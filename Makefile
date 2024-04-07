@@ -8,7 +8,7 @@ TARGET := oru2xds.egg-info build target
 .PHONY: clean
 clean:
 	rm -rf $(TARGET)
-
+	rm -rf dist/*
 
 ###
 # Build
@@ -16,9 +16,13 @@ clean:
 
 .PHONY: build
 build:
+	# Make sure you have required packages installed
+	# sudo apt install python3-pip python3-setuptools python3-wheel python3-build
+	# sudo apt install python3.11-venv twine
 	rm -rf dist/*
 	python3 -m build
 	python3 -m twine upload dist/*
+	# Shifting to the next release version
 	echo "$$(awk -F. '{$$3=$$3+1;print;}' OFS=. ORS="\"\n" src/oru2xds/__version__.py)" > src/oru2xds/__version__.py
 
 
@@ -51,5 +55,5 @@ docker:
 
 .PHONY: rundocker
 rundocker:
-	docker run -it --rm -p 2575:2575 antocm/oru2xds bash
+	docker run -it --rm -p 2575:2575 antocm/oru2xds
 

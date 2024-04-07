@@ -6,7 +6,7 @@
 *.json
 *.zip
 backups/*
-dist/
+dist
 build/
 src/oru2xds/__pycache__/
 .vscode/*

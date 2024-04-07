@@ -9,4 +9,4 @@ WORKDIR /usr/local/lib/python3.10/site-packages/oru2xds
 RUN python -m pip install --upgrade pip
 RUN pip install oru2xds
 
-CMD [ "python3", "oru2xds.py" ]
+ENTRYPOINT [ "python3", "oru2xds.py" ]
