@@ -1,0 +1,8 @@
+
+--uuid:cd03c813-58dd-46a8-a8d8-f158a4d0ab12
+Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml"
+Content-Transfer-Encoding: binary
+Content-ID: <root.message@cxf.apache.org>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-bResponse</Action><MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:142f44bf-8114-467c-a662-dab3e1d51454</MessageID><To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To><RelatesTo xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:1c50a454-0890-11f0-b9d2-fbb94cda2180</RelatesTo></soap:Header><soap:Body><ns3:RegistryResponse xmlns:ns7="urn:ihe:iti:rmd:2017" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns4="urn:ihe:iti:xds-b:2007" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success"><ns3:RegistryErrorList><ns3:RegistryError codeContext="An exemple warning" errorCode="XDSRegistryError" severity="urn:oasis:names:tc:ebxml-regrep:ErrorSeverityType:Warning" location="Iti41RouteBuilder"/></ns3:RegistryErrorList></ns3:RegistryResponse></soap:Body></soap:Envelope>
+--uuid:cd03c813-58dd-46a8-a8d8-f158a4d0ab12--
